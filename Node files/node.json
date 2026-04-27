@@ -1,0 +1,48 @@
+{
+  "Guid": "43a4264e-5cb5-40bc-9d92-1f01995250c7",
+  "Category": "Scripting nodes", 
+  "Name": "Expected Compounds 2",
+  "Description": "Calculates expected compounds based on Thiols, DiThiols, or user-defined custom reactions.",
+  "Version": 2,
+  "DevelopedBy": "Oscar Daniel Rangel Huerta",
+  "WorkflowType":"Post-Processing",
+  
+"ScriptProcessorArguments": {
+
+  "ExecutableCommandLineArguments": "D:\\Metabolomics\\CompoundDiscoverer_Scripts\\registered_node\\ExpectedCompounds_Node_Paper.R %NODEARGS% %PARAMETERS%",
+  "ExecutablePath": "C:\\Program Files\\R\\R-4.5.2\\bin\\Rscript.exe",
+  "ExpectedResponse": true,
+  "UseRFriendlyNames": true,
+  "RequestedTablesAndColumns":"Compounds:; Compounds per File:; Input Files:"
+  },
+"Parameters": [
+    {
+      "Category":"General",
+	  "Name": "Tolerance",
+      "DataType": "Float",
+      "DefaultValue": "0.005",
+      "Description": "Mass tolerance (Da) for matching."
+    },
+    {
+      "Category":"General",
+	  "Name": "Thiol Mass",
+      "DataType": "Float",
+      "DefaultValue": "119.04046",
+      "Description": "Mass shift for Thiol reaction. Set to 0 to disable."
+    },
+    {
+      "Category":"General",
+	  "Name": "DiThiol Mass",
+      "DataType": "Float",
+      "DefaultValue": "238.08092",
+      "Description": "Mass shift for DiThiol reaction. Set to 0 to disable."
+    },
+    {
+      "Category":"Additional Reactions",
+	  "Name": "Custom 1",
+      "DataType": "Float",
+      "DefaultValue": "0.0",
+      "Description": "Mass shift for Custom Reaction 1. Set to 0 to disable."
+    }
+  ]
+}

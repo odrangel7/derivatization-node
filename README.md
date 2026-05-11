@@ -3,7 +3,7 @@
 **Processing Node for Derivatization-Driven Annotation via Functional Group-Specific Reactions Using Compound Discoverer Software**
 
 ## Overview
-The **Expected Compounds 2.0 (SpectraMinds)** node is an R-based Scripting Node designed to integrate seamlessly with Thermo Fisher's Compound Discoverer software. It facilitates the discovery and annotation of derivatized compounds by detecting mass shifts associated with specific functional group reactions (e.g., Thiols, DiThiols, or Custom user-defined mass shifts).
+The **Expected Compounds 2.0** node is an R-based Scripting Node designed to integrate seamlessly with Thermo Fisher's Compound Discoverer software. It facilitates the discovery and annotation of derivatized compounds by detecting mass shifts associated with specific functional group reactions (e.g., Thiols, DiThiols, or Custom user-defined mass shifts).
 
 By comparing potential products against precursors found in control samples, the node effectively filters out noise and highlights chemically and biologically relevant derivatization pairs.
 
@@ -25,8 +25,11 @@ By comparing potential products against precursors found in control samples, the
 4. Update the `ExecutableCommandLineArguments` to point to the absolute path of the `ExpectedCompounds_Node_Paper.R` script on your machine.
 5. Register the `node.json` file in Compound Discoverer as a custom Scripting Node.
 
+## Data for testing
+Data presented in the manuscript can be downloaded at **insert the link when published**
+
 ## Usage
-1. Add the **"Expected Compounds 2"** node to your Compound Discoverer workflow as a Post-Processing node.
+1. Add the **"Expected Compounds 2.0"** node to your Compound Discoverer workflow as a Post-Processing node.
 2. Ensure it is connected to upstream nodes that output the **Compounds**, **Compounds per File**, and **Input Files** tables.
 3. Select the node in your workflow to configure its parameters:
    * **Tolerance:** Mass tolerance in Daltons (Da) for matching precursors to products. (Default: `0.005`)
